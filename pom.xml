@@ -4,6 +4,12 @@
   <artifactId>momit-api-client-examples</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>MomitAPiClientExamples</name>
+   <properties>
+        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.source>1.8</maven-compiler-plugin.source>
+        <maven-compiler-plugin.target>1.8</maven-compiler-plugin.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   
   <dependencies>
 		
