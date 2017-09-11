@@ -43,7 +43,7 @@ public class APIGeneralExamples {
 		//Generate simple API remote Client 
 		APIClient api;
 		try {
-			api = new APIClient("http://localhost:8080/momitbevel/v2/", apiKey);
+			api = new APIClient("http://54.194.234.22:8080/momitbevel/v2/", apiKey);
 
 			
 			/////////////////////////////////////////////////////////////////////////////////
