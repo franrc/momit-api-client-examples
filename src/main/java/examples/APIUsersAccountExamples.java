@@ -48,11 +48,8 @@ public class APIUsersAccountExamples {
 		user.setPassword("765123"); 
 		user = api.connect(user);
 		
-		//2.Forgot password
-		api.getSecurityClient().resetPassword(user); //send email, esperar a que te llegue el mail y coger el token
-		
 		//setear nueva password en el usuario
-		user.setPassword("765123"); 
+		user.setPassword("abced"); 
 		
 		//3. me llega el token de reseteo en el correo, y lo uso asi :
 		api.getSecurityClient().changePassword(user, null);
