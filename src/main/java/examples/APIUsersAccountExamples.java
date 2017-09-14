@@ -1,10 +1,8 @@
 package examples;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 
-import org.apache.http.client.ClientProtocolException;
 import org.apache.log4j.Logger;
 
 import com.greenmomit.api.client.APIClient;
@@ -16,7 +14,7 @@ public class APIUsersAccountExamples {
 	 * Common logger
 	 */
 	private static Logger log = Logger.getLogger(APIGeneralExamples.class);
-	public static void main(String[] args) throws URISyntaxException, ClientProtocolException, UnsupportedEncodingException, APIException, IOException{
+	public static void main(String[] args) throws URISyntaxException, APIException, IOException{
 		
 		/*******************
 		 * FORGOTTEN PASSWORD

@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.UUID;
-
-import org.apache.http.client.ClientProtocolException;
 
 import com.greenmomit.api.client.APIClient;
 import com.greenmomit.dto.DeviceDTO;
@@ -33,9 +30,6 @@ public class APIUserAndInstallations {
 			System.out.println(installationDevices);
 			
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {

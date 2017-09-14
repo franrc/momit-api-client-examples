@@ -5,8 +5,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import org.apache.http.client.ClientProtocolException;
-
 import com.greenmomit.api.client.APIClient;
 import com.greenmomit.dto.DeviceDTO;
 import com.greenmomit.dto.DevicePropertiesDTO;
@@ -14,9 +12,7 @@ import com.greenmomit.dto.InstallationDTO;
 import com.greenmomit.dto.UserDTO;
 import com.greenmomit.exception.APIException;
 import com.greenmomit.exception.APIValidationException;
-import com.greenmomit.exception.constants.ErrorsEnum;
 import com.greenmomit.utils.device.constants.DevicePropertiesEnum;
-import com.greenmomit.utils.device.constants.SmartModeEnum;
 import com.greenmomit.utils.device.constants.WorkingModeEnum;
 
 public class APISmartManagement {
@@ -85,9 +81,6 @@ public class APISmartManagement {
 			System.out.println(currentWorkingMode.getValue());
 			
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
