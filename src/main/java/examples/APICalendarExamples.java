@@ -13,7 +13,6 @@ import com.greenmomit.api.client.APIClient;
 import com.greenmomit.dto.CalendarDTO;
 import com.greenmomit.dto.CalendarPeriodDTO;
 import com.greenmomit.dto.CountryDTO;
-import com.greenmomit.dto.CurrencyDTO;
 import com.greenmomit.dto.ErrorDTO;
 import com.greenmomit.dto.LanguageDTO;
 import com.greenmomit.dto.MeasureDTO;
@@ -129,7 +128,7 @@ public class APICalendarExamples {
 		
 		//
 		CountryDTO country = new CountryDTO(22l); //uno que ya conozco el id, aunque podria buscarlo por las peticiones a api.getCountryClient().getall();
-		country.setMeasure(new MeasureDTO(11l).setCurrency(new CurrencyDTO(66l))); //lo mismo, los podria haber sacado del catalogo de measureClient y currencyClient
+		country.setMeasure(new MeasureDTO(11l)); //lo mismo, los podria haber sacado del catalogo de measureClient y currencyClient
 		user.setCountry(country); //select one from catalog
 		return user;
 	}
