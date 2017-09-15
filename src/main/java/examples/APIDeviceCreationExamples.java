@@ -5,7 +5,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import org.apache.http.client.ClientProtocolException;
 import org.apache.log4j.Logger;
 
 import com.greenmomit.api.client.APIClient;
@@ -67,9 +66,6 @@ public class APIDeviceCreationExamples {
 			error.getInfo(); //Use it for po files translations
 			
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {

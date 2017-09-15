@@ -7,14 +7,12 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
-import org.apache.http.client.ClientProtocolException;
 import org.apache.log4j.Logger;
 
 import com.greenmomit.api.client.APIClient;
 import com.greenmomit.dto.CalendarDTO;
 import com.greenmomit.dto.CalendarPeriodDTO;
 import com.greenmomit.dto.CountryDTO;
-import com.greenmomit.dto.CurrencyDTO;
 import com.greenmomit.dto.ErrorDTO;
 import com.greenmomit.dto.LanguageDTO;
 import com.greenmomit.dto.MeasureDTO;
@@ -98,10 +96,7 @@ public class APICalendarExamples {
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
+		}  catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (APIException e) {
@@ -133,7 +128,7 @@ public class APICalendarExamples {
 		
 		//
 		CountryDTO country = new CountryDTO(22l); //uno que ya conozco el id, aunque podria buscarlo por las peticiones a api.getCountryClient().getall();
-		country.setMeasure(new MeasureDTO(11l).setCurrency(new CurrencyDTO(66l))); //lo mismo, los podria haber sacado del catalogo de measureClient y currencyClient
+		country.setMeasure(new MeasureDTO(11l)); //lo mismo, los podria haber sacado del catalogo de measureClient y currencyClient
 		user.setCountry(country); //select one from catalog
 		return user;
 	}

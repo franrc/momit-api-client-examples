@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.apache.http.client.ClientProtocolException;
 import org.apache.log4j.Logger;
 
 import com.greenmomit.api.client.APIClient;
@@ -56,9 +55,6 @@ private static Logger log = Logger.getLogger(APIUserExamples.class);
 			api.disconnect();
 				
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
