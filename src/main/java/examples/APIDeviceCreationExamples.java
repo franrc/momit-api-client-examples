@@ -8,6 +8,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.greenmomit.api.client.APIClient;
+import com.greenmomit.dto.CDeviceTypeDTO;
 import com.greenmomit.dto.DeviceAvailabityDTO;
 import com.greenmomit.dto.DeviceDTO;
 import com.greenmomit.dto.ErrorDTO;
@@ -82,7 +83,8 @@ public class APIDeviceCreationExamples {
 		//add GW
 		DeviceDTO newDevice = new DeviceDTO();
 		newDevice.setSerialNumber(serialNumber);
-		newDevice.setType(Long.valueOf(deviceType.getId()));
+		newDevice.setType(new CDeviceTypeDTO());
+		newDevice.getType().setId(Long.valueOf(deviceType.getId()));
 		newDevice.setInstallation(installation);
 		newDevice.setName(name);
 		//isRegistered???

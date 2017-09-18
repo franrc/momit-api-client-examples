@@ -5,7 +5,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import org.apache.http.client.ClientProtocolException;
 import org.apache.log4j.Logger;
 
 import com.greenmomit.api.client.APIClient;
@@ -49,10 +48,10 @@ private static Logger log = Logger.getLogger(APIUserExamples.class);
 			
 			//DONT COPY EXACTLY THIS PIECE OF CODE BECAUSE PROBABLY IS NOT THE BEST WAY TO PREPARE DATA BEFORE CALLING STARTPAIRING
 			//get display serialNum
-			long serialNumberMaster = registeredDevices.stream().filter(dev -> DeviceTypeEnum.BEVEL_US_DISPLAY == DeviceTypeEnum.getByCode(dev.getType().intValue()))
+			long serialNumberMaster = registeredDevices.stream().filter(dev -> DeviceTypeEnum.BEVEL_US_DISPLAY == DeviceTypeEnum.getByCode(dev.getType().getId().intValue()))
 				.findFirst().orElse(new DeviceDTO(-1L)).getSerialNumber();
 			//get base serialNum
-			long serialNumberSlave = registeredDevices.stream().filter(dev -> DeviceTypeEnum.BEVEL_US_BASE == DeviceTypeEnum.getByCode(dev.getType().intValue()))
+			long serialNumberSlave = registeredDevices.stream().filter(dev -> DeviceTypeEnum.BEVEL_US_BASE == DeviceTypeEnum.getByCode(dev.getType().getId().intValue()))
 					.findFirst().orElse(new DeviceDTO(-1L)).getSerialNumber();
 			
 			//start pairing base and display
@@ -69,9 +68,6 @@ private static Logger log = Logger.getLogger(APIUserExamples.class);
 			error.getInfo(); //Use it for po files translations
 			
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {

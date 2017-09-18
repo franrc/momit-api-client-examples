@@ -58,7 +58,7 @@ public class APISmartManagement {
 			
 			//Look for current "SmartMode" property
 			for(DevicePropertiesDTO prop: deviceStatusProperties){
-				if(prop.getFkDevicePropertyTypeId() == DevicePropertiesEnum.WORKING_MODE.getCode()){
+				if(prop.getFkDevicePropertyTypeId().getId() == DevicePropertiesEnum.WORKING_MODE.getId()){
 					//Toggle for test
 					if(prop.getValue().equals(WorkingModeEnum.MANUAL.getLiteral())){
 						prop.setValue(WorkingModeEnum.SMART.getLiteral());
@@ -77,7 +77,7 @@ public class APISmartManagement {
 			}
 			
 			//fecth only DevicePropertiesEnum.WORKING_MODE property to verify changed value
-			DevicePropertiesDTO currentWorkingMode = api.getDeviceClient().getPropertiesByTypeId(installation.getId().toString(), device.getSerialNumber().toString(), DevicePropertiesEnum.WORKING_MODE.getCode().toString());
+			DevicePropertiesDTO currentWorkingMode = api.getDeviceClient().getPropertiesByTypeId(installation.getId().toString(), device.getSerialNumber().toString(), DevicePropertiesEnum.WORKING_MODE.getId().toString());
 			System.out.println(currentWorkingMode.getValue());
 			
 		} catch (URISyntaxException e) {
